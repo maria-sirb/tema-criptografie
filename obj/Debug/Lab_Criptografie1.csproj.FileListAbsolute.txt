@@ -12,3 +12,10 @@ C:\Users\Admin\source\repos\Criptografie\Lab_Criptografie1\obj\Debug\Lab_Criptog
 C:\Users\Admin\source\repos\Criptografie\Lab_Criptografie1\obj\Debug\Lab_Criptografie1.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\Criptografie\Lab_Criptografie1\obj\Debug\Lab_Criptografie1.exe
 C:\Users\Admin\source\repos\Criptografie\Lab_Criptografie1\obj\Debug\Lab_Criptografie1.pdb
+C:\Users\Admin\source\repos\Criptografie\tema-criptografie\bin\Debug\Lab_Criptografie1.exe.config
+C:\Users\Admin\source\repos\Criptografie\tema-criptografie\bin\Debug\Lab_Criptografie1.exe
+C:\Users\Admin\source\repos\Criptografie\tema-criptografie\bin\Debug\Lab_Criptografie1.pdb
+C:\Users\Admin\source\repos\Criptografie\tema-criptografie\obj\Debug\Lab_Criptografie1.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Criptografie\tema-criptografie\obj\Debug\Lab_Criptografie1.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Criptografie\tema-criptografie\obj\Debug\Lab_Criptografie1.exe
+C:\Users\Admin\source\repos\Criptografie\tema-criptografie\obj\Debug\Lab_Criptografie1.pdb

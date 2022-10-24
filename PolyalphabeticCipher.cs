@@ -67,10 +67,10 @@ namespace Lab_Criptografie1
 
                   //  Console.WriteLine(encriptedBlock);
                     
-                   /* foreach (KeyValuePair<char, char> kvp in Alphabet)
+                    foreach (KeyValuePair<char, char> kvp in Alphabet)
                     {
                         Console.WriteLine(kvp.Key + " " + kvp.Value);
-                    }*/
+                    }
                     k += Block;   
                 }
                 
