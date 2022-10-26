@@ -24,7 +24,7 @@ namespace Lab_Criptografie1
         }
         public override string Decript(string encriptedText)
         {
-            StringBuilder decriptedText = new StringBuilder();
+            StringBuilder decriptedText = new StringBuilder(); 
             for(int i= 0; i < encriptedText.Length; i++)
             {
                 if (Text[i] >= 'a' && Text[i] <= 'z')

@@ -38,15 +38,21 @@ namespace Lab_Criptografie1
            
             }
 
-            MonoalphabeticCipher mc = new MonoalphabeticCipher("Hello World!");
+            /*MonoalphabeticCipher mc = new MonoalphabeticCipher("Hello World!");
             string encriptedMc = mc.Encript();
             Console.WriteLine(encriptedMc);
-            Console.WriteLine(mc.Decript(encriptedMc));
+            Console.WriteLine(mc.Decript(encriptedMc));*/
 
-            PolyalphabeticCipher pc = new PolyalphabeticCipher("Hello World, Hello World!", 4);
+            /*PolyalphabeticCipher pc = new PolyalphabeticCipher("Hello World, Hello World!", 4);
             string encriptedPc = pc.Encript();
             Console.WriteLine("encripted: " + encriptedPc);
             Console.WriteLine("decripted:  " + pc.Decript(encriptedPc));
+            */
+
+            PlayfairCipher pc = new PlayfairCipher("monarchy", "hello world");
+            string encriptedpc = pc.Encript();
+            Console.WriteLine(encriptedpc);
+            Console.WriteLine(pc.Decript(encriptedpc));
             Console.ReadKey();
 
         }

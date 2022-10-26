@@ -64,8 +64,6 @@ namespace Lab_Criptografie1
                     MonoalphabeticCipher mc = new MonoalphabeticCipher(subText, Alphabet);
                     string encriptedBlock = mc.Encript();
                     encriptedText.Append(encriptedBlock);
-
-                  //  Console.WriteLine(encriptedBlock);
                     
                     foreach (KeyValuePair<char, char> kvp in Alphabet)
                     {

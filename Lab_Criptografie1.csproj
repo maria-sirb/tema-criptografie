@@ -46,6 +46,7 @@
     <Compile Include="CaesarsCipher.cs" />
     <Compile Include="Cryptography.cs" />
     <Compile Include="MonoalphabeticCipher.cs" />
+    <Compile Include="PlayfairCipher.cs" />
     <Compile Include="PolyalphabeticCipher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
