@@ -8,7 +8,7 @@ namespace Lab_Criptografie1
 {
     //a b c d e f g h i j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z
     //1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
-    class CaesarsCipher : Cryptography
+    class CaesarsCipher : MonoalphabeticSubstitution, ICypher
     {
         private int _key;
         private string _text;
@@ -33,7 +33,7 @@ namespace Lab_Criptografie1
                 Console.WriteLine(kvp.Key + " " +  kvp.Value);
             }*/
         }
-        public override string Decript(string encriptedText)
+        public string Decript(string encriptedText)
         {
             StringBuilder decriptedText = new StringBuilder();
 
@@ -59,7 +59,7 @@ namespace Lab_Criptografie1
 
         }
 
-        public override string Encript()
+        public string Encript()
         {
             StringBuilder encriptedText = new StringBuilder();
 

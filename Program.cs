@@ -30,11 +30,11 @@ namespace Lab_Criptografie1
             Console.WriteLine(cc.Encript());
             Console.WriteLine(cc.Decript("Khoor Zruogc!"));*/
 
-            CaesarsCipher cc2 = new CaesarsCipher(3, str);
-            string encriptedcc2 = cc2.Encript();
+           // CaesarsCipher cc2 = new CaesarsCipher(3, str);
+           // string encriptedcc2 = cc2.Encript();
            // Console.WriteLine(encriptedcc2);
            // Console.WriteLine("*******************************************************");
-          //  Console.WriteLine(Cryptography.Cryptanalyse(encriptedcc2));
+          //  Console.WriteLine(MonoalphabeticSubstitution.Cryptanalyse(encriptedcc2));
            
             }
 

@@ -44,12 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaesarsCipher.cs" />
-    <Compile Include="Cryptography.cs" />
+    <Compile Include="ICypher.cs" />
     <Compile Include="MonoalphabeticCipher.cs" />
+    <Compile Include="MonoalphabeticSubstitution.cs" />
     <Compile Include="PlayfairCipher.cs" />
     <Compile Include="PolyalphabeticCipher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

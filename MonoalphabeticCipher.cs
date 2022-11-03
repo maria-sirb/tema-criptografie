@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_Criptografie1
 {
-    class MonoalphabeticCipher : Cryptography
+    class MonoalphabeticCipher : MonoalphabeticSubstitution, ICypher
     {
         public string Text { get; set; }
         public Dictionary<char, char> Alphabet { get; set; }
@@ -22,7 +22,7 @@ namespace Lab_Criptografie1
             Text = text;
             Alphabet = alphabet;
         }
-        public override string Decript(string encriptedText)
+        public string Decript(string encriptedText)
         {
             StringBuilder decriptedText = new StringBuilder(); 
             for(int i= 0; i < encriptedText.Length; i++)
@@ -43,7 +43,7 @@ namespace Lab_Criptografie1
             return decriptedText.ToString();
         }
 
-        public override string Encript()
+        public string Encript()
         {
             StringBuilder decriptedText = new StringBuilder();
             for(int i = 0; i < Text.Length; i++)

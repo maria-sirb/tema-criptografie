@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_Criptografie1
 {
-    class PolyalphabeticCipher : Cryptography
+    class PolyalphabeticCipher : Utilities, ICypher
     {
         public string Text { get; set; }
         public List<Dictionary<char, char>> Alphabets { get; set; }
@@ -18,7 +18,7 @@ namespace Lab_Criptografie1
             Alphabets = new List<Dictionary<char, char>>();
         }
 
-        public override string Decript(string encriptedText)
+        public string Decript(string encriptedText)
         {
             int k = 0, blockNr = 0;
             StringBuilder decriptedText = new StringBuilder();
@@ -44,7 +44,7 @@ namespace Lab_Criptografie1
             return decriptedText.ToString();
         }
 
-        public override string Encript()
+        public string Encript()
         {
             int k = 0;
             StringBuilder encriptedText = new StringBuilder();
