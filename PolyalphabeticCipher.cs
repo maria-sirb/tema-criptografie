@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_Criptografie1
 {
-    class PolyalphabeticCipher : Utilities, ICypher
+    class PolyalphabeticCipher : Utilities, ICipher
     {
         public string Text { get; set; }
         public List<Dictionary<char, char>> Alphabets { get; set; }

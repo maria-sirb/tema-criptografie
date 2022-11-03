@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaesarsCipher.cs" />
-    <Compile Include="ICypher.cs" />
+    <Compile Include="ICipher.cs" />
     <Compile Include="MonoalphabeticCipher.cs" />
     <Compile Include="MonoalphabeticSubstitution.cs" />
     <Compile Include="PlayfairCipher.cs" />

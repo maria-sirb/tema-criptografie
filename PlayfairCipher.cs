@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_Criptografie1
 {
-    class PlayfairCipher : ICypher
+    class PlayfairCipher : ICipher
     {
         public char[] Key { get; set; }
         public string Text { get; set; }

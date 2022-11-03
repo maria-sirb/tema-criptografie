@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_Criptografie1
 {
-    interface ICypher
+    interface ICipher
     {
         string Encript();
         string Decript(string encriptedText);

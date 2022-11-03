@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_Criptografie1
 {
-    class MonoalphabeticCipher : MonoalphabeticSubstitution, ICypher
+    class MonoalphabeticCipher : MonoalphabeticSubstitution, ICipher
     {
         public string Text { get; set; }
         public Dictionary<char, char> Alphabet { get; set; }
