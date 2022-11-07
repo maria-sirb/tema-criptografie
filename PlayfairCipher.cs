@@ -27,28 +27,29 @@ namespace Lab_Criptografie1
             {
                 char l1 = Text[i];
                 char l2 = Text[i + 1];
-                int[] coordsl1 = FindCoordinates(l1);
-                int[] coordsl2 = FindCoordinates(l2);
+                int lineL1, colL1, lineL2, colL2;
+                (lineL1, colL1) = FindCoordinates(l1);
+                (lineL2, colL2) = FindCoordinates(l2);
 
                 //If both the letters are in the same row: Take the letter to the right of each one
-                if (coordsl1[0] == coordsl2[0])
+                if (lineL1 == lineL2)
                 {
-                    encriptedText.Append(Table[coordsl1[0], (coordsl1[1] + 1) % 5]);
-                    encriptedText.Append(Table[coordsl2[0], (coordsl2[1] + 1) % 5]);
+                    encriptedText.Append(Table[lineL1, (colL1 + 1) % 5]);
+                    encriptedText.Append(Table[lineL2, (colL2 + 1) % 5]);
 
                 }
                 //If both the letters are in the same column: Take the letter below each one
-                else if (coordsl1[1] == coordsl2[1])
+                else if (colL1 == colL2)
                 {
-                    encriptedText.Append(Table[(coordsl1[0] + 1) % 5, coordsl1[1]]);
-                    encriptedText.Append(Table[(coordsl2[0] + 1) % 5, coordsl2[1]]);
+                    encriptedText.Append(Table[(lineL1 + 1) % 5, colL1]);
+                    encriptedText.Append(Table[(lineL2 + 1) % 5, colL2]);
                 }
                 //If neither of the above rules is true: Form a rectangle with the two letters and
                 //take the letters on the horizontal opposite corner of the rectangle.
                 else
                 {
-                    encriptedText.Append(Table[coordsl1[0], coordsl2[1]]);
-                    encriptedText.Append(Table[coordsl2[0], coordsl1[1]]);
+                    encriptedText.Append(Table[lineL1, colL2]);
+                    encriptedText.Append(Table[lineL2, colL1]);
                 }
 
             }
@@ -63,28 +64,29 @@ namespace Lab_Criptografie1
             {
                 char l1 = encriptedText[i];
                 char l2 = encriptedText[i + 1];
-                int[] coordsl1 = FindCoordinates(l1);
-                int[] coordsl2 = FindCoordinates(l2);
+                int lineL1, colL1, lineL2, colL2;
+                (lineL1, colL1) = FindCoordinates(l1);
+                (lineL2, colL2) = FindCoordinates(l2);
 
                 //If both the letters are in the same row: Take the letter to the left of each one
-                if (coordsl1[0] == coordsl2[0])
+                if (lineL1 == lineL2)
                 {
-                    decriptedText.Append(Table[coordsl1[0], (coordsl1[1] + 4) % 5]);
-                    decriptedText.Append(Table[coordsl2[0], (coordsl2[1] + 4) % 5]);
+                    decriptedText.Append(Table[lineL1, (colL1 + 4) % 5]);
+                    decriptedText.Append(Table[lineL2, (colL2 + 4) % 5]);
 
                 }
                 //If both the letters are in the same column: Take the letter above each one
-                else if (coordsl1[1] == coordsl2[1])
+                else if (colL1 == colL2)
                 {
-                    decriptedText.Append(Table[(coordsl1[0] + 4) % 5, coordsl1[1]]);
-                    decriptedText.Append(Table[(coordsl2[0] + 4) % 5, coordsl2[1]]);
+                    decriptedText.Append(Table[(lineL1 + 4) % 5, colL1]);
+                    decriptedText.Append(Table[(lineL2 + 4) % 5, colL2]);
                 }
                 //If neither of the above rules is true: Form a rectangle with the two letters and
                 //take the letters on the horizontal opposite corner of the rectangle.
                 else
                 {
-                    decriptedText.Append(Table[coordsl1[0], coordsl2[1]]);
-                    decriptedText.Append(Table[coordsl2[0], coordsl1[1]]);
+                    decriptedText.Append(Table[lineL1, colL2]);
+                    decriptedText.Append(Table[lineL2, colL1]);
                 }
 
             }
@@ -97,22 +99,14 @@ namespace Lab_Criptografie1
         /// </summary>
         /// <param name="letter"></param>
         /// <returns>The coordinates of the letter in the table</returns>
-        private int[] FindCoordinates (char letter)
+        private (int,int) FindCoordinates (char letter)
         {
-            int[] coords = new int[2] { -1, -1 };
+      
             for (int i = 0; i < 5; i++)
-            {
                 for (int j = 0; j < 5; j++)
-                {
                     if (Table[i, j] == letter)
-                    {
-                        coords[0] = i;
-                        coords[1] = j;
-                        return coords;
-                    }
-                }
-            }
-            return coords;
+                        return (i, j);
+            return (0, 0);
         }
         /// <summary>
         /// Modifies the plaintext so it can be ready for encription

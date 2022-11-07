@@ -49,7 +49,7 @@ namespace Lab_Criptografie1
             Console.WriteLine("decripted:  " + pc.Decript(encriptedPc));
             */
 
-            PlayfairCipher pc = new PlayfairCipher("monarchy", "hello world");
+            PlayfairCipher pc = new PlayfairCipher("apple", "hello world");
             string encriptedpc = pc.Encript();
             Console.WriteLine(encriptedpc);
             Console.WriteLine(pc.Decript(encriptedpc));
