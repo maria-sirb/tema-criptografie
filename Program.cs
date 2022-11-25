@@ -49,10 +49,17 @@ namespace Lab_Criptografie1
             Console.WriteLine("decripted:  " + pc.Decript(encriptedPc));
             */
 
-            PlayfairCipher pc = new PlayfairCipher("apple", "hello world");
-            string encriptedpc = pc.Encript();
-            Console.WriteLine(encriptedpc);
-            Console.WriteLine(pc.Decript(encriptedpc));
+            /* PlayfairCipher pc = new PlayfairCipher("apple", "hello world");
+             string encriptedpc = pc.Encript();
+             Console.WriteLine(encriptedpc);
+             Console.WriteLine(pc.Decript(encriptedpc));
+            */
+
+            JeffersonDiskCipher jc = new JeffersonDiskCipher(new int[] { 1, 0, 2, 3, 4 }, 3, "h3llo 4w");
+            string encriptedJc = jc.Encript();
+            Console.WriteLine(encriptedJc);
+            Console.WriteLine(jc.Decript(encriptedJc));
+
             Console.ReadKey();
 
         }
